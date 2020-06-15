@@ -10,11 +10,13 @@ public class MSD {
     private static String[] aux;
 
     /**
-     * Return the character of a given index in a string; or -1 if it does not exist.
+     * Return the character of a given index in a string; or -1 if it does not
+     * exist.
      *
      * @param s The string.
      * @param d The index.
-     * @return Char code of the {@code d}'s character in {@code s}. {@code -1} if the index is out of range.
+     * @return Char code of the {@code d}'s character in {@code s}. {@code -1}
+     * if the index is out of range.
      */
     static int charAt(String s, int d) {
         return d < s.length() ? s.charAt(d) : -1;
@@ -34,10 +36,10 @@ public class MSD {
     /**
      * Sort a string subarray by the characters of a given index.
      *
-     * @param a Array to be sorted.
+     * @param a  Array to be sorted.
      * @param lo Starting index of the subarray.
      * @param hi Ending index of the subarray.
-     * @param d Sort by the {@code d}'s character of each string.
+     * @param d  Sort by the {@code d}'s character of each string.
      */
     private static void sort(String[] a, int lo, int hi, int d) {
         // Switch to insertion sort for short subarrays.
@@ -59,8 +61,8 @@ public class MSD {
         // Copy aux back to a.
         for (int i = lo; i < hi; ++i)
             a[i] = aux[i];
-        // The iteration terminates when d exceeds the length of the longest string in a.
-        // Strings with length d are skipped.
+        // The iteration terminates when d exceeds the length of the longest
+        // string in a. Strings with length d are skipped.
         for (int i = 0; i < R; ++i)
             sort(a, count[i], count[i + 1], d + 1);
     }

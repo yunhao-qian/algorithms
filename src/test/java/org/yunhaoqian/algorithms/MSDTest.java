@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class MSDTest {
-    private static String[] fileNames = new String[] {
+    private static final String[] fileNames = new String[]{
             "1000words.txt",
             "commonwords.txt",
             "ospd.txt",
@@ -21,7 +21,8 @@ public class MSDTest {
     private String[][] arrays;
 
     /**
-     * Initialize the array of shuffled string arrays. They hold the lines from files whose names are from {@fileNames}.
+     * Initialize the array of shuffled string arrays. They hold the lines from
+     * files whose names are from {@fileNames}.
      *
      * @throws Exception
      */
@@ -42,7 +43,8 @@ public class MSDTest {
     public void testSort() {
         for (int i = 0; i < fileNames.length; ++i) {
             MSD.sort(arrays[i]);
-            Assert.assertTrue("Filename: " + fileNames[i], Utility.isSorted(arrays[i]));
+            Assert.assertTrue("Filename: " + fileNames[i],
+                    Utility.isSorted(arrays[i]));
         }
     }
 }

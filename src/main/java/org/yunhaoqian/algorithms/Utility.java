@@ -9,10 +9,10 @@ public class Utility {
     /**
      * Swap two elements in an array.
      *
-     * @param array The array.
+     * @param array  The array.
      * @param index1 Index of the first element.
      * @param index2 Index of the second element.
-     * @param <T> Any type.
+     * @param <T>    Any type.
      */
     public static <T> void swap(T[] array, int index1, int index2) {
         T temp = array[index1];
@@ -23,12 +23,13 @@ public class Utility {
     /**
      * Extract lines of a text file from a class directory.
      *
-     * @param fileName Name of the text file.
+     * @param fileName  Name of the text file.
      * @param fromClass Class from which to search for the file.
      * @return A string list that holds the lines.
      * @throws Exception
      */
-    public static List<String> readLines(Class fromClass, String fileName) throws Exception {
+    public static List<String> readLines(Class fromClass, String fileName)
+            throws Exception {
         URL url = fromClass.getResource(fileName);
         if (url == null)
             throw new RuntimeException("File not found");
@@ -39,7 +40,7 @@ public class Utility {
      * Return whether an array is sorted in increasing order.
      *
      * @param array Array to be checked.
-     * @param <T> Class that implements {@code Comparable}.
+     * @param <T>   Class that implements {@code Comparable}.
      * @return {@code true} if {@code array} is sorted; {@code false} otherwise.
      */
     public static <T extends Comparable<T>> boolean isSorted(T[] array) {

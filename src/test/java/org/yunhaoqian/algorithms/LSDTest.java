@@ -25,7 +25,8 @@ public class LSDTest {
     /**
      * Check whether the strings in {@code array} have the same length.
      *
-     * @return {@code true} if they are of the same length; {@code false} otherwise.
+     * @return {@code true} if they are of the same length; {@code false}
+     * otherwise.
      */
     private boolean haveSameLength() {
         int W = array[0].length();

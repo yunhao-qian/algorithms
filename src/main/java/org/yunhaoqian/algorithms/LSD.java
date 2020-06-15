@@ -12,7 +12,7 @@ public class LSD {
         // Alphabet size. Accept char code from 0 to R - 1.
         int R = 256;
         // Out-of-place sorting.
-        String aux[] = new String[N];
+        String[] aux = new String[N];
 
         // Sort by the d's digit in each iteration.
         for (int d = W - 1; d >= 0; --d) {
