@@ -21,6 +21,19 @@ public class Utility {
     }
 
     /**
+     * Return the character of a given index in a string; or -1 if it does not
+     * exist.
+     *
+     * @param s The string.
+     * @param d The index.
+     * @return Char code of the {@code d}'s character in {@code s}. {@code -1}
+     * if the index is out of range.
+     */
+    public static int charAt(String s, int d) {
+        return d < s.length() ? s.charAt(d) : -1;
+    }
+
+    /**
      * Extract lines of a text file from a class directory.
      *
      * @param fileName  Name of the text file.
@@ -32,7 +45,7 @@ public class Utility {
             throws Exception {
         URL url = fromClass.getResource(fileName);
         if (url == null)
-            throw new RuntimeException("File not found");
+            throw new RuntimeException(fileName + ": file not found");
         return Files.readAllLines(Paths.get(url.toURI()));
     }
 
